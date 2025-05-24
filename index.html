@@ -16,7 +16,7 @@
 
   <body class="text-black">
     <!-- HEADER -->
-    <header class="flex justify-between items-center text-[2rem] uppercase tracking-wider px-6 py-6 font-medium">
+    <header class="flex flex-col sm:flex-row sm:justify-between items-center text-xl sm:text-2xl uppercase tracking-wider px-6 py-6 font-medium text-center sm:text-left gap-4">
       <div>Joaquin Manuel Philco Montoya</div>
       <nav class="space-x-4">
         <a href="#" class="underline">(about me)</a>
@@ -36,9 +36,9 @@
         <!-- LEFT COLUMN -->
         <div class="max-w-3xl text-center md:text-left space-y-6">
           <!-- Name & Tagline -->
-          <h1 class="text-6xl md:text-8xl font-extrabold">Joaquin Philco</h1>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl xl:text-8xl font-extrabold">Joaquin Philco</h1>
           <p class="text-base md:text-lg text-neutral-700">
-            Computer Engineering graduate specializing in AI-powered embedded systems and smart technologies.
+            Computer Engineering graduate with hands-on experience in robotics, industry, research, open-source and CubeSat communications.
           </p>
 
           <div class="mt-20 flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -57,12 +57,12 @@
           <div class="mt-8">
             <h3 class="text-3xl font-semibold mb-2">About Me</h3>
             <p class="text-neutral-700 mb-4">
-              I'm a detail-oriented engineer passionate about designing intelligent systems that operate in real time. From microcontrollers to machine learning, I love the magic where hardware meets AI.
+              Final-year Computer Engineering student (York University, May 2025 grad) with expertise in embedded systems, robotics, and software development. Experience includes PID controller design for robotic arms (ROS2), secure REST API/certificate infrastructure implementation at RBC (Spring Boot, Kubernetes), and embedded communication framework development for CubeSat testing. Also maintained C++/QML camera applications for FuriOS. Seeking real-time intelligent systems roles in aerospace, robotics, or embedded AI. Resume provides further details.
             </p>
             <ul class="list-disc list-inside text-neutral-700 space-y-1">
               <li>BEng with Honours in Computer Engineering</li>
-              <li>AI & Embedded Systems Enthusiast</li>
-              <li>Skilled in Python, C++, and TensorFlow Lite</li>
+              <li>Open source contributor</li>
+              <li>Skilled in Python, C++, Java, Bash</li>
             </ul>
           </div>
 
@@ -105,12 +105,11 @@
         </div>
 
         <!-- RIGHT COLUMN -->
-        <div class="bg-neutral-200 p-6 rounded-xl shadow-xl">
+        <div class="bg-neutral-200 p-4 sm:p-6 rounded-xl shadow-xl w-full md:w-auto flex justify-center">
           <img src="./Assets/me.jpg"
               alt="Joaquin Philco"
-              class="w-80 md:w-[50rem] rounded-md" />
+              class="w-full max-w-sm sm:max-w-md md:max-w-lg xl:max-w-2xl rounded-md object-cover" />
         </div>
-
       </div>
     </main>
 
@@ -122,7 +121,7 @@
       <div class="absolute inset-0 bg-[url('./Assets/background1.jpg')] bg-cover bg-center opacity-30 pointer-events-none z-0"></div>
 
       <!-- Content Layer -->
-      <div class="relative z-10 grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto">
 
         <!-- Project 1 -->
         <div class="relative group rounded-xl overflow-hidden shadow-lg">
