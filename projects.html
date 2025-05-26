@@ -6,6 +6,8 @@
   <title>Projects — Joaquin Philco</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/alpinejs" defer></script>
+
 </head>
     <body class="bg-[#f8f8f6] text-black">
 
@@ -34,95 +36,137 @@
             <h2 class="text-4xl font-bold text-center mb-12 uppercase">Projects</h2>
 
             <!-- Project 1 -->
-            <div class="grid md:grid-cols-2 bg-white shadow-md mb-12 rounded-lg overflow-hidden">
-            <img src="./Assets/6DoFRoboticArm.jpg" alt="6 DoF Robotic Arm" class="w-full h-full object-cover">
-            <div class="p-8 flex flex-col justify-between">
-                <div>
-                <h3 class="text-sm text-gray-500 uppercase mb-1">Robotics</h3>
-                <h2 class="text-2xl font-semibold mb-4">6 DoF Robotic Arm</h2>
-                <p class="text-gray-700 mb-6">
-                    Six Degrees of Freedom robotic arm with custom firmware, inverse kinematics, and encoder-based PID control using ROS2.
-                </p>
-                <div class="flex space-x-6 text-sm text-gray-700 mb-6">
-                    <div><i class="fas fa-robot mr-2"></i> ROS2</div>
-                    <div><i class="fas fa-code mr-2"></i> C++</div>
-                    <div><i class="fas fa-microchip mr-2"></i> Embedded</div>
+            <div x-data="{ open: false }" class="bg-white shadow-md mb-12 rounded-lg overflow-hidden transition hover:shadow-xl">
+                <div class="h-[500px] overflow-hidden">
+                    <img src="./Assets/6DoFRoboticArm.jpg" alt="6 DoF Robotic Arm" class="w-full h-full object-cover">
                 </div>
+
+                <!-- Content -->
+                <div class="p-8 cursor-pointer" @click="open = !open">
+                    <div>
+                        <h3 class="text-sm text-gray-500 uppercase mb-1">Robotics</h3>
+                        <h2 class="text-2xl font-semibold mb-4">6 DoF Robotic Arm</h2>
+                        <p class="text-gray-700">
+                            Six Degrees of Freedom robotic arm with custom firmware, inverse kinematics, and encoder-based PID control using ROS2.
+                        </p>
+                        <div class="flex space-x-6 text-sm text-gray-700 mt-4">
+                            <div><i class="fas fa-robot mr-2"></i> ROS2</div>
+                            <div><i class="fas fa-code mr-2"></i> C++</div>
+                            <div><i class="fas fa-microchip mr-2"></i> Embedded</div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Extra Info -->
+                    <div x-show="open" x-transition class="mt-6 text-sm text-gray-700">
+                        <hr class="my-4">
+                        <p class="mb-4">
+                            This project features inverse kinematics solved analytically, real-time telemetry over UDP, and a modular ROS2 driver with PID auto-tuning and encoder offset correction.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Project</a>
+                            <a href="#" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex space-x-4">
-                <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Project</a>
-                <a href="#" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">GitHub</a>
-                </div>
-            </div>
             </div>
 
             <!-- Project 2 -->
-            <div class="grid md:grid-cols-2 bg-white shadow-md mb-12 rounded-lg overflow-hidden">
-            <img src="./Assets/FuriLabsLogo.png" alt="FuriOS Gallery App" class="w-full h-full object-cover">
-            <div class="p-8 flex flex-col justify-between">
-                <div>
-                <h3 class="text-sm text-gray-500 uppercase mb-1">Linux Mobile</h3>
-                <h2 class="text-2xl font-semibold mb-4">FuriOS Gallery Application</h2>
-                <p class="text-gray-700 mb-6">
-                    Created from scratch, this native gallery app for the FuriOS mobile Linux system includes features like folder creation and media previews, tightly integrated with D-Bus and Gio.
-                </p>
-                <div class="flex space-x-6 text-sm text-gray-700 mb-6">
-                    <div><i class="fas fa-mobile-alt mr-2"></i> Linux Mobile</div>
-                    <div><i class="fas fa-images mr-2"></i> Gallery</div>
-                    <div><i class="fas fa-terminal mr-2"></i> DBus</div>
+            <div x-data="{ open: false }" class="bg-white shadow-md mb-12 rounded-lg overflow-hidden transition hover:shadow-xl">
+                <div class="h-[500px] overflow-hidden">
+                    <img src="./Assets/FuriLabsLogo.png" alt="FuriOS Gallery App" class="w-full h-full object-cover">
                 </div>
+
+                <div class="p-8 cursor-pointer" @click="open = !open">
+                    <div>
+                        <h3 class="text-sm text-gray-500 uppercase mb-1">Linux Mobile</h3>
+                        <h2 class="text-2xl font-semibold mb-4">FuriOS Gallery Application</h2>
+                        <p class="text-gray-700">
+                            Created from scratch, this native gallery app for the FuriOS mobile Linux system includes folder creation, media previews, and deep integration with DBus and Gio.
+                        </p>
+                        <div class="flex space-x-6 text-sm text-gray-700 mt-4">
+                            <div><i class="fas fa-mobile-alt mr-2"></i> Linux Mobile</div>
+                            <div><i class="fas fa-images mr-2"></i> Gallery</div>
+                            <div><i class="fas fa-terminal mr-2"></i> DBus</div>
+                        </div>
+                    </div>
+
+                    <div x-show="open" x-transition class="mt-6 text-sm text-gray-700">
+                        <hr class="my-4">
+                        <p class="mb-4">
+                            Built natively for FuriOS 13.0.7 using C++ and QML, the application includes dynamic thumbnail generation, system media hooks, and handles image capture-to-viewer workflows.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Project</a>
+                            <a href="https://github.com/FuriLabs/furios-gallery" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex space-x-4">
-                <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Project</a>
-                <a href="https://github.com/FuriLabs/furios-gallery" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">GitHub</a>
-                </div>
-            </div>
             </div>
 
             <!-- Project 3 -->
-            <div class="grid md:grid-cols-2 bg-white shadow-md mb-12 rounded-lg overflow-hidden">
-            <img src="./Assets/SOBER.jpeg" alt="REXUS/BEXUS ESA" class="w-full h-full object-cover">
-            <div class="p-8 flex flex-col justify-between">
-                <div>
-                <h3 class="text-sm text-gray-500 uppercase mb-1">Space Systems</h3>
-                <h2 class="text-2xl font-semibold mb-4">REXUS/BEXUS ESA Mission</h2>
-                <p class="text-gray-700 mb-6">
-                    European Space Agency mission involving stratospheric balloons and Resident Space Object detection. Participated in hardware design, payload testing, and mission planning.
-                </p>
-                <div class="flex space-x-6 text-sm text-gray-700 mb-6">
-                    <div><i class="fas fa-satellite mr-2"></i> ESA</div>
-                    <div><i class="fas fa-globe-europe mr-2"></i> REXUS/BEXUS</div>
-                    <div><i class="fas fa-microscope mr-2"></i> Research</div>
+            <div x-data="{ open: false }" class="bg-white shadow-md mb-12 rounded-lg overflow-hidden transition hover:shadow-xl">
+                <div class="h-[500px] overflow-hidden">
+                    <img src="./Assets/SOBER.jpeg" alt="REXUS/BEXUS ESA" class="w-full h-full object-cover">
                 </div>
+
+                <div class="p-8 cursor-pointer" @click="open = !open">
+                    <div>
+                        <h3 class="text-sm text-gray-500 uppercase mb-1">Space Systems</h3>
+                        <h2 class="text-2xl font-semibold mb-4">REXUS/BEXUS ESA Mission</h2>
+                        <p class="text-gray-700">
+                            European Space Agency mission involving stratospheric balloons and Resident Space Object (RSO) detection, presented at international conferences.
+                        </p>
+                        <div class="flex space-x-6 text-sm text-gray-700 mt-4">
+                            <div><i class="fas fa-satellite mr-2"></i> ESA</div>
+                            <div><i class="fas fa-globe-europe mr-2"></i> REXUS/BEXUS</div>
+                            <div><i class="fas fa-microscope mr-2"></i> Research</div>
+                        </div>
+                    </div>
+
+                    <div x-show="open" x-transition class="mt-6 text-sm text-gray-700">
+                        <hr class="my-4">
+                        <p class="mb-4">
+                            Designed and integrated hardware for optical tracking, developed star-detection software pipelines, and collaborated with ESA engineers during the campaign week in Esrange.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Mission</a>
+                            <a href="#" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">Paper</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex space-x-4">
-                <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Mission</a>
-                <a href="#" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">Paper</a>
-                </div>
-            </div>
             </div>
 
             <!-- Project 4 -->
-            <div class="grid md:grid-cols-2 bg-white shadow-md mb-12 rounded-lg overflow-hidden">
-            <img src="./Assets/FuriLabsLogo.png" alt="FuriOS Camera App" class="w-full h-full object-cover">
-            <div class="p-8 flex flex-col justify-between">
-                <div>
-                <h3 class="text-sm text-gray-500 uppercase mb-1">Linux Mobile</h3>
-                <h2 class="text-2xl font-semibold mb-4">FuriOS Camera Application</h2>
-                <p class="text-gray-700 mb-6">
-                    Maintained and modernized the native camera application for FuriOS. Integrated QR code scanning, photo geotagging with GeoClue, and optimized performance across devices.
-                </p>
-                <div class="flex space-x-6 text-sm text-gray-700 mb-6">
-                    <div><i class="fas fa-camera mr-2"></i> Camera</div>
-                    <div><i class="fas fa-map-marker-alt mr-2"></i> GeoClue</div>
-                    <div><i class="fas fa-code mr-2"></i> QML/C++</div>
+            <div x-data="{ open: false }" class="bg-white shadow-md mb-12 rounded-lg overflow-hidden transition hover:shadow-xl">
+                <div class="h-[500px] overflow-hidden">
+                    <img src="./Assets/FuriLabsLogo.png" alt="FuriOS Camera App" class="w-full h-full object-cover">
                 </div>
+
+                <div class="p-8 cursor-pointer" @click="open = !open">
+                    <div>
+                        <h3 class="text-sm text-gray-500 uppercase mb-1">Linux Mobile</h3>
+                        <h2 class="text-2xl font-semibold mb-4">FuriOS Camera Application</h2>
+                        <p class="text-gray-700">
+                            Maintained and modernized the native camera app for FuriOS. Includes QR scanning, GPS geotagging via GeoClue, and significant performance enhancements.
+                        </p>
+                        <div class="flex space-x-6 text-sm text-gray-700 mt-4">
+                            <div><i class="fas fa-camera mr-2"></i> Camera</div>
+                            <div><i class="fas fa-map-marker-alt mr-2"></i> GeoClue</div>
+                            <div><i class="fas fa-code mr-2"></i> QML/C++</div>
+                        </div>
+                    </div>
+
+                    <div x-show="open" x-transition class="mt-6 text-sm text-gray-700">
+                        <hr class="my-4">
+                        <p class="mb-4">
+                            Added support for asynchronous photo capture, optimized DBus camera interfaces, integrated QR decoding using ZBar, and reduced launch time by 30%.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Project</a>
+                            <a href="https://github.com/FuriLabs/furios-camera/" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex space-x-4">
-                <a href="#" class="border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition">View Project</a>
-                <a href="https://github.com/FuriLabs/furios-camera/" class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">GitHub</a>
-                </div>
-            </div>
             </div>
 
         </section>
