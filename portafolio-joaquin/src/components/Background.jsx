@@ -8,6 +8,16 @@ export const Background = () => {
     useEffect(() => {
         generateStarts();
         generateMeteors();
+
+        const handleResize = () => {
+            generateStarts();
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
     }, []);
 
     const generateStarts = (num) => {
