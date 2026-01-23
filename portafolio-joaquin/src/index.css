@@ -75,14 +75,16 @@
     --card: 222 47% 8%;
   }
 
-  * @apply border-border;
+  * {
+    @apply border-border;
+  }
 
   html{
     @apply scroll-smooth;
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300
+    @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -147,7 +149,7 @@
 }
 
 @utility star {
-  @apply absolute rounded-full fbg-white;
+  @apply absolute rounded-full bg-white;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
