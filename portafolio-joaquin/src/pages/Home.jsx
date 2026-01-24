@@ -1,5 +1,6 @@
 import { ExperienceCard } from "@/components/ExperienceCard"
 import { ProjectsCard } from "@/components/ProjectsCard"
+import { ContactPanel } from "@/components/ContactPanel"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { Background } from "@/components/Background"
 import { MainCard } from "@/components/MainCard"
@@ -20,5 +21,6 @@ export const Home = () => {
                     <ExperienceCard />
                 </main>
             {/* Footer*/}
+                <ContactPanel />
         </div>
 }

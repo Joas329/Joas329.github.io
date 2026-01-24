@@ -245,7 +245,7 @@
   }
 }
 
-
+/* Glass Sweep Animation */
 @keyframes glass-sweep {
   0%   { transform: translateX(-140%) rotate(12deg); opacity: 0; }
   10%  { opacity: 0.55; }
