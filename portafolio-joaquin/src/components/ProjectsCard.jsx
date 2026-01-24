@@ -86,7 +86,7 @@ export const ProjectsCard = () => {
             {/* CTA */}
             <div className="mt-16 text-center">
               <a
-                href="/projects.html"
+                href="/projects"
                 className="glass-button-ghost inline-block py-6 px-12 text-xl hover:text-2xl transition-all duration-300 text-white"
               >
                 Check Out All My Projects

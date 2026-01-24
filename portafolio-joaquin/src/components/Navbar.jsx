@@ -1,13 +1,14 @@
 import {cn} from "@/lib/utils";
+import { Link } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useEffect, useState} from "react";
 
 const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#home" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: window.location.pathname + "#contact" },
 ];
 
 export const Navbar = () => {
@@ -32,7 +33,14 @@ export const Navbar = () => {
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" href="#home">
                     <span className="relative z-10">
-                        <span className="text-glow text-foreground"> Joaquin Philco</span> Portafolio
+                        <Link to="/" className="text-xl font-bold text-primary flex items-center">
+                        <span className="relative z-10">
+                            <span className="text-glow text-foreground">
+                            Joaquin Philco
+                            </span>{" "}
+                            Portfolio
+                        </span>
+                        </Link>
                     </span>
                 </a>
 
