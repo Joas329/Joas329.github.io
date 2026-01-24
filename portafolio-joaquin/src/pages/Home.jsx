@@ -2,6 +2,7 @@ import { ExperienceCard } from "@/components/ExperienceCard"
 import { ProjectsCard } from "@/components/ProjectsCard"
 import { ContactPanel } from "@/components/ContactPanel"
 import { ThemeToggle } from "@/components/ThemeToggle"
+import { SkillsCard } from "../components/SkillCard"
 import { Background } from "@/components/Background"
 import { MainCard } from "@/components/MainCard"
 import { Navbar } from "@/components/Navbar"
@@ -15,6 +16,7 @@ export const Home = () => {
             {/* Main Content*/}
                 <main>
                     <MainCard />
+                    <SkillsCard />
                     <ExperienceCard />
                     <ProjectsCard />
                 </main>

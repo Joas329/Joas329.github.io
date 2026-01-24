@@ -285,3 +285,32 @@
     animation: glass-sweep 1.6s ease-in-out forwards;
   }
 }
+
+/* Skills tiles */
+@utility skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@utility skill-tile {
+  width: 56px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+@utility skill-tile:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
