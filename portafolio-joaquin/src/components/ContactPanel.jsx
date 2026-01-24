@@ -65,23 +65,6 @@ export const ContactPanel = () => {
           </button>
         </div>
       </div>
-
-      {/* Floating Back-to-Top (optional, very nice UX) */}
-      <button
-        onClick={() =>
-          window.scrollTo({ top: 0, behavior: "smooth" })
-        }
-        className="
-          fixed bottom-6 right-6 z-50
-          glass-panel glass-sweep
-          w-12 h-12
-          flex items-center justify-center
-          hover:scale-105 transition
-        "
-        aria-label="Back to top"
-      >
-        <ArrowUp size={20} />
-      </button>
     </section>
   );
 };
