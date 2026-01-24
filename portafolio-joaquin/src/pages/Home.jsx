@@ -17,8 +17,8 @@ export const Home = () => {
             {/* Main Content*/}
                 <main>
                     <MainCard />
-                    <ProjectsCard />
                     <ExperienceCard />
+                    <ProjectsCard />
                 </main>
             {/* Footer*/}
                 <ContactPanel />
