@@ -1,3 +1,4 @@
+import { ProjectsCard } from "@/components/ProjectsCard"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { Background } from "@/components/Background"
 import { MainCard } from "@/components/MainCard"
@@ -14,6 +15,7 @@ export const Home = () => {
             {/* Main Content*/}
                 <main>
                     <MainCard />
+                    <ProjectsCard />
                 </main>
             {/* Footer*/}
         </div>
