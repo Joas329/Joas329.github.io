@@ -12,8 +12,8 @@ export const MainCard = () => {
             </h1>
 
             <p className="text-base md:text-lg text-foreground/80">
-              Computer Engineering graduate with hands-on experience in robotics,
-              industry, research, open-source and CubeSat communications.
+              Computer Engineering graduate with hands-on experience in robotics, computer vision,
+              industry, research, open-source and CubeSat communications and design.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -29,8 +29,8 @@ export const MainCard = () => {
             <div className="pt-6">
               <h3 className="text-2xl font-semibold mb-2">About Me</h3>
               <p className="text-foreground/80 mb-3">
-                Final-year Computer Engineering student (York University, May 2025 grad)
-                with expertise in embedded systems, robotics, and software development...
+                Computer Engineer with experience in backend development, computer vision, and system integration skilled
+in Java, Python, and C++ for building scalable, maintainable applications from enterprise APIs to aerospacegrade flight systems, driven by a passion for innovation, science, and user/system-focused design.
               </p>
 
               <ul className="list-disc list-inside text-foreground/80 space-y-1">

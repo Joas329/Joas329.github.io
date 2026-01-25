@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ExperienceCard = () => {
   const experiences = [
     {
@@ -100,10 +102,10 @@ export const ExperienceCard = () => {
 
           {/* Optional: CTA row */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="glass-button-primary">
+            <Link to="/#contact" className="glass-button-primary">
               Contact Me
-            </a>
-            <a href="/Assets/Joaquin_Philco_CV.pdf" download className="glass-button-ghost">
+            </Link>
+            <a href="/assets/Joaquin_Philco_CV.pdf" download className="glass-button-ghost">
               Download CV
             </a>
           </div>
