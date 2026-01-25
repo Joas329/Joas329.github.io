@@ -78,9 +78,6 @@ export const ExperienceCard = () => {
             <div className="space-y-10">
               {experiences.map((e) => (
                 <div key={e.title} className="relative">
-                  {/* dot */}
-                  <div className="absolute -left-[2px] md:-left-[1px] top-2 w-5 h-5 rounded-full bg-foreground border-4 border-background" />
-
                   {/* card */}
                   <div className="glass-panel p-5 md:p-6 text-left">
                     <h3 className="text-xl md:text-2xl font-semibold">
